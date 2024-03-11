@@ -1,10 +1,12 @@
 // clippy2.rs
-// 执行 `rustlings hint clippy2` 或在观察模式下使用 `hint` 子命令来获取提示。
+// 
+// Execute `rustlings hint clippy2` or use the `hint` watch subcommand for a
+// hint.
 
 fn main() {
     let mut res = 42;
     let option = Some(12);
-    while let Some(x) = option {
+    if let Some(x) = option {
         res += x;
     }
     println!("{}", res);
