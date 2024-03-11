@@ -1,9 +1,6 @@
 // options3.rs
-//
-// Execute `rustlings hint options3` or use the `hint` watch subcommand for a
-// hint.
+// 执行 `rustlings hint options3` 或在观察模式下使用 `hint` 子命令来获取提示。
 
-// I AM NOT DONE
 
 struct Point {
     x: i32,
@@ -13,9 +10,9 @@ struct Point {
 fn main() {
     let y: Option<Point> = Some(Point { x: 100, y: 200 });
 
-    match y {
+    match &y {
         Some(p) => println!("Co-ordinates are {},{} ", p.x, p.y),
-        _ => panic!("no match!"),
+        _ => println!("no match"),
     }
-    y; // Fix without deleting this line.
+    y; // 修复问题但不能删除这行
 }

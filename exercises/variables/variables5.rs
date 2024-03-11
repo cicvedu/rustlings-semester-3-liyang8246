@@ -1,13 +1,9 @@
 // variables5.rs
-//
-// Execute `rustlings hint variables5` or use the `hint` watch subcommand for a
-// hint.
-
-// I AM NOT DONE
+// 执行 `rustlings hint variables5` 或在观察模式下使用 `hint` 子命令来获取提示。
 
 fn main() {
-    let number = "T-H-R-E-E"; // don't change this line
-    println!("Spell a Number : {}", number);
-    number = 3; // don't rename this variable
-    println!("Number plus two is : {}", number + 2);
+    let number = "T-H-R-E-E"; // 不要改动此行
+    println!("拼写一个数字 ： {}", number);
+    let number = 3; // 不要重命名这个变量名
+    println!("数字加2为 ： {}", number + 2);
 }

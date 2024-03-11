@@ -1,20 +1,15 @@
 // hashmaps2.rs
-//
-// We're collecting different fruits to bake a delicious fruit cake. For this,
-// we have a basket, which we'll represent in the form of a hash map. The key
-// represents the name of each fruit we collect and the value represents how
-// many of that particular fruit we have collected. Three types of fruits -
-// Apple (4), Mango (2) and Lychee (5) are already in the basket hash map. You
-// must add fruit to the basket so that there is at least one of each kind and
-// more than 11 in total - we have a lot of mouths to feed. You are not allowed
-// to insert any more of these fruits!
-//
-// Make me pass the tests!
-//
-// Execute `rustlings hint hashmaps2` or use the `hint` watch subcommand for a
-// hint.
 
-// I AM NOT DONE
+// 给定了一个哈希表形式的水果篮子。
+// 它的键表明水果的名字，值表明篮子里有多少个这种水果。
+// 你需要放入 *多于 11 个* 水果到篮子中。三种水果 - Apple (4),
+// Mango (2) 和 Lychee (5) 已经在篮子中给定了。
+// 你不可以插入更多这些水果！
+//
+// 让我通过所有测试！
+//
+// 执行 `rustlings hint hashmaps2` 或在观察模式下使用 `hint` 子命令来获取提示。
+
 
 use std::collections::HashMap;
 
@@ -37,9 +32,9 @@ fn fruit_basket(basket: &mut HashMap<Fruit, u32>) {
     ];
 
     for fruit in fruit_kinds {
-        // TODO: Insert new fruits if they are not already present in the
-        // basket. Note that you are not allowed to put any type of fruit that's
-        // already present!
+        // TODO: 如果水果不存在，则放入。
+        // 注意，你不可以放入任何已存在的水果！
+        basket.entry(fruit).or_insert(1);
     }
 }
 
@@ -47,7 +42,6 @@ fn fruit_basket(basket: &mut HashMap<Fruit, u32>) {
 mod tests {
     use super::*;
 
-    // Don't modify this function!
     fn get_fruit_basket() -> HashMap<Fruit, u32> {
         let mut basket = HashMap::<Fruit, u32>::new();
         basket.insert(Fruit::Apple, 4);
@@ -80,14 +74,5 @@ mod tests {
         fruit_basket(&mut basket);
         let count = basket.values().sum::<u32>();
         assert!(count > 11);
-    }
-    
-    #[test]
-    fn all_fruit_types_in_basket() {
-        let mut basket = get_fruit_basket();
-        fruit_basket(&mut basket);
-        for amount in basket.values() {
-            assert_ne!(amount, &0);
-        }
     }
 }

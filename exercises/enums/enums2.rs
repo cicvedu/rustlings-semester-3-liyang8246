@@ -1,13 +1,14 @@
 // enums2.rs
-//
-// Execute `rustlings hint enums2` or use the `hint` watch subcommand for a
-// hint.
+// 执行 `rustlings hint enums2` 或在观察模式下使用 `hint` 子命令来获取提示。
 
-// I AM NOT DONE
 
 #[derive(Debug)]
 enum Message {
-    // TODO: define the different variants used below
+    // TODO: 定义下面所用的消息类型
+    Move{x:i32,y:i32},
+    Echo(String),
+    ChangeColor(u8,u8,u8),
+    Quit,
 }
 
 impl Message {

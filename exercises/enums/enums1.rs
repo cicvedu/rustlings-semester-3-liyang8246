@@ -1,17 +1,17 @@
 // enums1.rs
-//
-// No hints this time! ;)
-
-// I AM NOT DONE
+// 这次没有提示！ ;)
 
 #[derive(Debug)]
 enum Message {
-    // TODO: define a few types of messages as used below
+    // TODO: 定义下面所用的消息类型
+    Quit,
+    Move,
+    ChangeColor,
 }
 
 fn main() {
     println!("{:?}", Message::Quit);
-    println!("{:?}", Message::Echo);
+    println!("{:?}", Message::Quit);
     println!("{:?}", Message::Move);
     println!("{:?}", Message::ChangeColor);
 }

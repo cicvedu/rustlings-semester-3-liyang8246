@@ -1,15 +1,11 @@
 // functions5.rs
-//
-// Execute `rustlings hint functions5` or use the `hint` watch subcommand for a
-// hint.
-
-// I AM NOT DONE
+// 执行 `rustlings hint functions5` 或在观察模式下使用 `hint` 子命令来获取提示。
 
 fn main() {
     let answer = square(3);
-    println!("The square of 3 is {}", answer);
+    println!("3的平方是 {}", answer);
 }
 
 fn square(num: i32) -> i32 {
-    num * num;
+    num * num
 }

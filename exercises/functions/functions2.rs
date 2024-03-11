@@ -1,16 +1,12 @@
 // functions2.rs
-//
-// Execute `rustlings hint functions2` or use the `hint` watch subcommand for a
-// hint.
-
-// I AM NOT DONE
+// 执行 `rustlings hint functions2` 或在观察模式下使用 `hint` 子命令来获取提示。
 
 fn main() {
     call_me(3);
 }
 
-fn call_me(num:) {
+fn call_me(num:i32) {
     for i in 0..num {
-        println!("Ring! Call number {}", i + 1);
+        println!("铛铛！呼叫号码 {}", i + 1);
     }
 }

@@ -1,13 +1,9 @@
 // variables4.rs
-//
-// Execute `rustlings hint variables4` or use the `hint` watch subcommand for a
-// hint.
-
-// I AM NOT DONE
+// 执行 `rustlings hint variables4` 或在观察模式下使用 `hint` 子命令来获取提示。
 
 fn main() {
-    let x = 3;
-    println!("Number {}", x);
-    x = 5; // don't change this line
-    println!("Number {}", x);
+    let mut x = 3;
+    println!("数字 {}", x);
+    x = 5; // 不要改变这一行
+    println!("数字 {}", x);
 }

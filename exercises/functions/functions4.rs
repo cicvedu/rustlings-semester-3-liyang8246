@@ -1,21 +1,17 @@
 // functions4.rs
-//
-// This store is having a sale where if the price is an even number, you get 10
-// Rustbucks off, but if it's an odd number, it's 3 Rustbucks off. (Don't worry
-// about the function bodies themselves, we're only interested in the signatures
-// for now. If anything, this is a good way to peek ahead to future exercises!)
-//
-// Execute `rustlings hint functions4` or use the `hint` watch subcommand for a
-// hint.
+// 执行 `rustlings hint functions4` 或在观察模式下使用 `hint` 子命令来获取提示。
 
-// I AM NOT DONE
+// 这个商店正在打折，如果价格是偶数，你可以获得 10 锈币的优惠，
+// 但是如果价格是奇数，则优惠 3 锈币。
+// （不要担心函数体本身，我们现在只对函数签名感兴趣。
+// 如果有的话，这是一个提前了解未来练习的好方法。）
 
 fn main() {
     let original_price = 51;
-    println!("Your sale price is {}", sale_price(original_price));
+    println!("你的售价为 {}", sale_price(original_price));
 }
 
-fn sale_price(price: i32) -> {
+fn sale_price(price: i32) -> i32{
     if is_even(price) {
         price - 10
     } else {

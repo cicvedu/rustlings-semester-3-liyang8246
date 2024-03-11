@@ -1,15 +1,11 @@
 // variables2.rs
-//
-// Execute `rustlings hint variables2` or use the `hint` watch subcommand for a
-// hint.
-
-// I AM NOT DONE
+// 执行 `rustlings hint variables2` 或在观察模式下使用 `hint` 子命令来获取提示。
 
 fn main() {
-    let x;
+    let x = 5;
     if x == 10 {
-        println!("x is ten!");
+        println!("x 是 10！");
     } else {
-        println!("x is not ten!");
+        println!("x 不是 10！");
     }
 }

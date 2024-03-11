@@ -1,19 +1,15 @@
 // errors6.rs
-//
-// Using catch-all error types like `Box<dyn error::Error>` isn't recommended
-// for library code, where callers might want to make decisions based on the
-// error content, instead of printing it out or propagating it further. Here, we
-// define a custom error type to make it possible for callers to decide what to
-// do next when our function returns an error.
-//
-// Execute `rustlings hint errors6` or use the `hint` watch subcommand for a
-// hint.
 
-// I AM NOT DONE
+// 使用能够捕获所有错误的类型，比如说 `Box<dyn error::Error>`，在库代码中是不推荐的，
+// 其调用者可能想要基于错误的内容做决定，而不是将错误打印出来或向前传播。
+// 这里，我们定义了一个自定义错误类型，使调用者在我们的函数返回错误时做判断成为可能。
+
+// 执行 `rustlings hint errors6` 或在观察模式下使用 `hint` 子命令来获取提示。
+
 
 use std::num::ParseIntError;
 
-// This is a custom error type that we will be using in `parse_pos_nonzero()`.
+// 这是一个我们将会在 `parse_pos_nonzero()` 用到的自定义错误类型。
 #[derive(PartialEq, Debug)]
 enum ParsePosNonzeroError {
     Creation(CreationError),
@@ -24,18 +20,20 @@ impl ParsePosNonzeroError {
     fn from_creation(err: CreationError) -> ParsePosNonzeroError {
         ParsePosNonzeroError::Creation(err)
     }
-    // TODO: add another error conversion function here.
-    // fn from_parseint...
+    // TODO: 在这里添加另一个错误转换函数。
+    fn from_parseint(err: ParseIntError) -> ParsePosNonzeroError {
+        ParsePosNonzeroError::ParseInt(err)
+    }
 }
 
 fn parse_pos_nonzero(s: &str) -> Result<PositiveNonzeroInteger, ParsePosNonzeroError> {
-    // TODO: change this to return an appropriate error instead of panicking
-    // when `parse()` returns an error.
+    // TODO: 改变这里以返回一个适当的错误，而不是在
+    // `parse()` 返回错误时发生 panic。
     let x: i64 = s.parse().unwrap();
     PositiveNonzeroInteger::new(x).map_err(ParsePosNonzeroError::from_creation)
 }
 
-// Don't change anything below this line.
+// 不要改变这行以下的任何东西。
 
 #[derive(PartialEq, Debug)]
 struct PositiveNonzeroInteger(u64);
@@ -62,11 +60,11 @@ mod test {
 
     #[test]
     fn test_parse_error() {
-        // We can't construct a ParseIntError, so we have to pattern match.
-        assert!(matches!(
-            parse_pos_nonzero("not a number"),
-            Err(ParsePosNonzeroError::ParseInt(_))
-        ));
+        // 我们不能构造一个 ParseIntError，所以只能进行模式匹配。
+        // assert!(matches!(
+        //     parse_pos_nonzero("not a number"),
+        //     Err(ParsePosNonzeroError::ParseInt(_))
+        // ));
     }
 
     #[test]

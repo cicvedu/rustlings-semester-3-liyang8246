@@ -1,13 +1,8 @@
 // variables1.rs
-//
-// Make me compile!
-//
-// Execute `rustlings hint variables1` or use the `hint` watch subcommand for a
-// hint.
-
-// I AM NOT DONE
+// 让我可以编译！
+// 执行 `rustlings hint variables1` 或在观察模式下使用 `hint` 子命令来获取提示。
 
 fn main() {
-    x = 5;
+    let x = 5;
     println!("x has the value {}", x);
 }

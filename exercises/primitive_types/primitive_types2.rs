@@ -1,35 +1,29 @@
 // primitive_types2.rs
-//
-// Fill in the rest of the line that has code missing! No hints, there's no
-// tricks, just get used to typing these :)
-//
-// Execute `rustlings hint primitive_types2` or use the `hint` watch subcommand
-// for a hint.
-
-// I AM NOT DONE
+// 填写代码行的缺失部分
+// 没有提示，没有技巧，只要习惯键入这些 :)
 
 fn main() {
     // Characters (`char`)
 
-    // Note the _single_ quotes, these are different from the double quotes
-    // you've been seeing around.
+    // 注意 _单_ 引号，它们和双引号是不同的
+    // 你可以在周围看到区别
     let my_first_initial = 'C';
     if my_first_initial.is_alphabetic() {
-        println!("Alphabetical!");
+        println!("这是个字母！");
     } else if my_first_initial.is_numeric() {
-        println!("Numerical!");
+        println!("这是个数字！");
     } else {
-        println!("Neither alphabetic nor numeric!");
+        println!("这不是字母也不是数字！");
     }
 
-    let // Finish this line like the example! What's your favorite character?
-    // Try a letter, try a number, try a special character, try a character
-    // from a different language than your own, try an emoji!
+    let your_character = '🤣';// 参照示例完成此行！这是你最喜欢的字符吗？
+    // 试一下字母，试一下数字，试一下特殊字符，试一下
+    // 你的语言之外其它语言的特殊字符，试一下 emoji ！
     if your_character.is_alphabetic() {
-        println!("Alphabetical!");
+        println!("这是个字母！");
     } else if your_character.is_numeric() {
-        println!("Numerical!");
+        println!("这是个数字！");
     } else {
-        println!("Neither alphabetic nor numeric!");
+        println!("这不是字母也不是数字！");
     }
 }
